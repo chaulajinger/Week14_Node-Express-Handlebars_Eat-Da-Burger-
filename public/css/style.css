@@ -1,0 +1,61 @@
+.jumbotron {
+  margin-top: 10px;
+  border: 2px solid darkslateblue;
+  color: darkslateblue;
+}
+
+body {
+  background-color: rgba(255, 115, 0, 0.568);
+  color: rgb(117, 61, 139);
+}
+
+p {
+  margin-left: 4%;
+  display: inline-block;
+  font-weight: bold;
+}
+
+img.burger {
+  max-width: 250px;
+  max-height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+div.eat_me {
+  position: relative;
+}
+
+button.devour_it {
+  position: absolute;
+  top: -10%;
+  margin-left: 5%;
+  border: 2px solid darkslateblue;
+  color: darkslateblue;
+  font-weight: bolder;
+}
+
+button.devour_it:hover {
+  background-color: rgb(56, 122, 122);
+  color: white;
+}
+
+.form-control, #enter_button {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 5%;
+}
+
+ul pre {
+  color: darkslateblue;
+  font-weight: bold;
+}
+
+#enter_button {
+  background-color: darkslateblue;
+  color: white;
+}

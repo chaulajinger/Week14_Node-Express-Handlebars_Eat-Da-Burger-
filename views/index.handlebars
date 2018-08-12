@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Eat The Best Burger!</h1>
+    <h5>Add Yummy Burgers; Eat Yummy Burgers; Just Have Lots of Fun</h5>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 Choice_of_burgers_to_eat">
+      <h2><i>Choice of burgers to Eat</i></h2>
+      <br>
+      <ul class="Choice_of_burgers_to_eat">
+        {{#each burgers}} 
+        {{#unless this.devoured}}
+        <div class="row eat_me">
+          <p>{{this.id}}. {{this.burger_name}}</p>
+          <form method="POST" action="/burgers/update?_method=PUT" class="devour">
+            <input type="hidden" name="burger_id" value={{this.id}}>
+            <br>
+            <button type="submit" class="btn btn-default devour_it">Devour It</button>
+          </form>
+        </div>
+      </ul>
+      {{/unless}} 
+      {{/each}}
+    </div>
+    <div class="col-sm-4 hide_on_tablet">
+      <img scr="./images/ChoiceOfBurgerPic.png" class="burger">
+      <form action="/burgers/insert" method="POST">
+        <input type="text" name="burger_name" class="form-control" id="enter_burger" value="">
+        <button type="submit" class="btn btn-primary" id="enter_button">Add Yummy Burger!</button>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <h2><i>Burgers You've Eaten</i></h2>
+      <br>
+      <ul>
+        {{#each burgers}} {{#if this.devoured}}
+        <pre>{{this.id}}. {{this.burger_name}}</pre> {{/if}} {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
